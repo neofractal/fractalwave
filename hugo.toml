@@ -1,6 +1,0 @@
-baseURL = 'https://neofractal.github.io/fractalwave/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = "hugo-theme-nostyleplease"
-
-
