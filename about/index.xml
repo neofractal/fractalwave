@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Abouts on My New Hugo Site</title>
-    <link>https://neofractal.github.io/fractalwave/about/</link>
+    <link>https://neofractal.github.io/about/</link>
     <description>Recent content in Abouts on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Aug 2023 23:33:22 +0800</lastBuildDate><atom:link href="https://neofractal.github.io/fractalwave/about/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Aug 2023 23:33:22 +0800</lastBuildDate><atom:link href="https://neofractal.github.io/about/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fractal</title>
-      <link>https://neofractal.github.io/fractalwave/about/fractal/</link>
+      <link>https://neofractal.github.io/about/fractal/</link>
       <pubDate>Fri, 25 Aug 2023 23:33:22 +0800</pubDate>
       
-      <guid>https://neofractal.github.io/fractalwave/about/fractal/</guid>
+      <guid>https://neofractal.github.io/about/fractal/</guid>
       <description>Fractal, a synthesizer project featured with a proactive passive tone and stochastic ambience.</description>
     </item>
     
