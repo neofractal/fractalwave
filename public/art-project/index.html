@@ -1,0 +1,184 @@
+<!DOCTYPE html><html lang="zh-cn"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+
+  <title>
+    
+      (2) art project∼
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="../" />
+  
+  
+  
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+<script>
+  const screenWidth = () => {
+    return document.documentElement.clientWidth || document.body.clientWidth;
+  }
+
+  const chunkArray = (arr, chunkSize) => {
+    const result = [];
+    for (let i = 0; i < arr.length; i += chunkSize) {
+      result.push(arr.slice(i, i + chunkSize));
+    }
+    return result;
+  }
+
+  const adjustHeightsToMatch = (selector, fn) => {
+    var index;
+    if (typeof fn === "function") {
+      index = fn;
+    }
+    else {
+      index = () => { return fn; };
+    }
+
+    const itemsList = document.querySelectorAll(selector);
+    const itemsArray = Array.from(itemsList);
+    const itemsGroup = chunkArray(itemsArray, index());
+
+    itemsList.forEach(item => {
+      item.style.height = "";
+    });
+
+    for (let items of itemsGroup) {
+      let maxHeight = 0;
+      items.forEach(item => {
+        const height = item.offsetHeight;
+        if (height > maxHeight) {
+          maxHeight = height;
+        }
+      });
+
+      items.forEach(item => {
+        item.style.height = `${maxHeight}px`;
+      });
+    }
+  }
+
+  const randomInt = () => {
+    return Math.floor(Math.random() * 10000) % 10000;
+  }
+
+  const overlap = (el1, el2) => {
+    const domRect1 = el1.getBoundingClientRect();
+    const domRect2 = el2.getBoundingClientRect();
+    return !(
+      domRect1.top > domRect2.bottom + gap ||
+      domRect1.right < domRect2.left - gap ||
+      domRect1.bottom < domRect2.top - gap ||
+      domRect1.left > domRect2.right + gap
+    );
+  }
+
+  const debounce = (fn, delay) => {
+    let timer;
+    return function () {
+      if (timer) {
+        clearTimeout(timer);
+      }
+      timer = setTimeout(() => {
+        fn();
+      }, delay);
+    }
+  };
+</script>
+
+<body class="art-project"><div class="header">
+  <div class="backlink"><a class="anchor" href="..">..</a></div>
+  <div class="block"></div>
+  <div class="title">(2) art project∼</div>
+</div><div class="projects"><article class="project"><div class="year">2023</div>
+<a block class="title" href="../art-project/sound-funeral/">Sound Funeral</a>
+<div class="description"><p>sound installation/event</p>
+<p>sound,illustration,text,video</p>
+<p>Rotterdam</p>
+</div><div class="image-container" id="at-1">
+    <img class="image" src="../art-project/sound-funeral/image.png">
+  </div><style>
+    .image-container#at-1::after { z-index: -1;clip-path: circle(12% at 18% 25%); }
+  </style></article><article class="project"><div class="year">2023</div>
+<a block class="title" href="../art-project/melkhal-pulse-a-symphony-across-time/"><p>Melkhal Pulse:</p>
+<p>A Symphony Across Time</p>
+</a>
+<div class="description"><p>collaboration project</p>
+<p>sound installation/performance</p>
+<p>Enschede</p>
+</div><div class="image-container" id="at-2">
+    <img class="image" src="../art-project/melkhal-pulse-a-symphony-across-time/image.jpg">
+  </div><style>
+    .image-container#at-2::after { z-index: -1;clip-path: polygon(67% 7%, 86% 82.5%, 50% 82.5%); }
+  </style></article><article class="project"><div class="year">2023</div>
+<a block class="title" href="../art-project/butterfly-island/">Butterfly Island</a>
+<div class="description"><p>commissioned work</p>
+<p>music, sound work, performance</p>
+<p>Hong Kong</p>
+</div><div class="image-container" id="at-3">
+    <img class="image" src="../art-project/butterfly-island/image.jpg">
+  </div><style>
+    .image-container#at-3::after { z-index: -1;clip-path: polygon(14% 50%, calc(14% - 6%) 75%, calc(14% + 6%) 75%); }
+  </style></article><article class="project"><div class="year">2022</div>
+<a block class="title" href="../art-project/sound-playground/">Sound Playground</a>
+<div class="description"><p>collaboration project</p>
+<p>sound installation/event</p>
+<p>Arnhem, Amsterdam</p>
+</div><div class="image-container" id="at-4">
+    <img class="image" src="../art-project/sound-playground/image.png">
+  </div><style>
+    .image-container#at-4::after { z-index: -1;clip-path: circle(8% at 46% 17.5%); }
+  </style></article><article class="project"><div class="year">2022</div>
+<a block class="title" href="../art-project/respiration/">Respiration</a>
+<div class="description"><p>collaboration project</p>
+<p>sound installation/event</p>
+<p>Arnhem, Amsterdam</p>
+</div><div class="image-container" id="at-5">
+    <img class="image" src="../art-project/respiration/image.jpg">
+  </div><style>
+    .image-container#at-5::after { z-index: 10;clip-path: circle(3.5% at 25% 15.5%); }
+  </style></article><article class="project"><div class="year">2022</div>
+<a block class="title" href="../art-project/voices/">Voices</a>
+<div class="description"><p>collaboration project</p>
+<p>sound installation,exhibition</p>
+<p>Foshan</p>
+</div><div class="image-container" id="at-6">
+    <img class="image" src="../art-project/voices/image.jpg">
+  </div><style>
+    .image-container#at-6::after { z-index: 10;clip-path: polygon(52% 68%, 48% 88%, 56% 88%); }
+  </style></article><article class="project"><div class="year">2022</div>
+<a block class="title" href="../art-project/nomadic-washerwoman/">Nomadic Washerwoman</a>
+<div class="description"><p>commissioned work</p>
+<p>sound work,exhibition</p>
+<p>Amsterdam</p>
+</div><div class="image-container" id="at-7">
+    <img class="image" src="../art-project/nomadic-washerwoman/image.jpg">
+  </div><style>
+    .image-container#at-7::after { z-index: -1;clip-path: circle(32% at 63% 45% ); }
+  </style></article></div><div class="footer">© all rights reserved.</div><script>
+  var rows = () => {
+    if (screenWidth() <= 800) {
+      return 1;
+    }
+    return 2;
+  }
+
+  const resizeTitleHeight = () => { adjustHeightsToMatch('.project > .title', rows) };
+  window.addEventListener('resize', resizeTitleHeight);
+
+  const resizeDescriptionHeight = () => { adjustHeightsToMatch('.project > .description', rows) };
+  window.addEventListener('resize', resizeDescriptionHeight);
+  
+  window.onload = () => {
+    resizeTitleHeight();
+    resizeDescriptionHeight();
+  }
+</script>
+
+</body>
+
+</html>

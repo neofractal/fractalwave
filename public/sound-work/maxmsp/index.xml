@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>maxmsp on fractal&#39;s sound practice</title>
+    <link>/sound-work/maxmsp/</link>
+    <description>Recent content in maxmsp on fractal&#39;s sound practice</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language><atom:link href="/sound-work/maxmsp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>granular design</title>
+      <link>/sound-work/maxmsp/granular-design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sound-work/maxmsp/granular-design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>feedback of a tidal Borges</title>
+      <link>/sound-work/maxmsp/feedback-of-a-tidal-borges/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sound-work/maxmsp/feedback-of-a-tidal-borges/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jellyfish,multisoundscape</title>
+      <link>/sound-work/maxmsp/jellyfishmultisoundscape/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sound-work/maxmsp/jellyfishmultisoundscape/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spectral freeze</title>
+      <link>/sound-work/maxmsp/spectral-freeze/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sound-work/maxmsp/spectral-freeze/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

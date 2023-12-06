@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="zh-cn"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+
+  <title>
+    
+      (4) archive∼
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="../" />
+  
+  
+  
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+<script>
+  const screenWidth = () => {
+    return document.documentElement.clientWidth || document.body.clientWidth;
+  }
+
+  const chunkArray = (arr, chunkSize) => {
+    const result = [];
+    for (let i = 0; i < arr.length; i += chunkSize) {
+      result.push(arr.slice(i, i + chunkSize));
+    }
+    return result;
+  }
+
+  const adjustHeightsToMatch = (selector, fn) => {
+    var index;
+    if (typeof fn === "function") {
+      index = fn;
+    }
+    else {
+      index = () => { return fn; };
+    }
+
+    const itemsList = document.querySelectorAll(selector);
+    const itemsArray = Array.from(itemsList);
+    const itemsGroup = chunkArray(itemsArray, index());
+
+    itemsList.forEach(item => {
+      item.style.height = "";
+    });
+
+    for (let items of itemsGroup) {
+      let maxHeight = 0;
+      items.forEach(item => {
+        const height = item.offsetHeight;
+        if (height > maxHeight) {
+          maxHeight = height;
+        }
+      });
+
+      items.forEach(item => {
+        item.style.height = `${maxHeight}px`;
+      });
+    }
+  }
+
+  const randomInt = () => {
+    return Math.floor(Math.random() * 10000) % 10000;
+  }
+
+  const overlap = (el1, el2) => {
+    const domRect1 = el1.getBoundingClientRect();
+    const domRect2 = el2.getBoundingClientRect();
+    return !(
+      domRect1.top > domRect2.bottom + gap ||
+      domRect1.right < domRect2.left - gap ||
+      domRect1.bottom < domRect2.top - gap ||
+      domRect1.left > domRect2.right + gap
+    );
+  }
+
+  const debounce = (fn, delay) => {
+    let timer;
+    return function () {
+      if (timer) {
+        clearTimeout(timer);
+      }
+      timer = setTimeout(() => {
+        fn();
+      }, delay);
+    }
+  };
+</script>
+
+<body class="archive"><div class="header">
+  <div class="backlink"><a class="anchor" href="..">..</a></div>
+  <div class="block"></div>
+  <div class="title">(4) archive∼</div>
+</div><article class="project">
+  <a block class="title" href="../archive/sound-funeral/">Sound Funeral</a>
+  <div class="description">by Fractal, 2023</div><div class="categories"><a class="category" href="../categories/sound-art">#sound art#</a><a class="category" href="../categories/animal">#animal#</a><a class="category" href="../categories/writing">#writing#</a></div><div class="summary">These unique encounters became a way of social support and validation. Sound as an omnipresent and uncloseable source of vibrations, reconnects humans with the rhythms and cycles of nature, and in a sense, promotes a deeper understanding and appreciation of the interconnectedness of living beings.</div><div class="image-container" id="at-1">
+    <img class="image" src="../archive/sound-funeral/image.png">
+  </div><style>
+    .image-container#at-1::after { z-index: -1;clip-path: circle(12% at calc(82.5% + 3%) 50%); }
+  </style></article><article class="project">
+  <a block class="title" href="http://ccru.net/archive/darkside.htm" target="_blank">Darkside of the Wave</a>
+  <div class="description">Ccru archive</div><div class="categories"><a class="category" href="../categories/abstract-culture">#abstract culture#</a><a class="category" href="../categories/cybernetics">#cybernetics#</a><a class="category" href="../categories/archive">#archive#</a></div><div class="summary">Following the cyclical exhaustion of the first cyberspace boom artificial winter set in throughout the capitalist world. Investors&rsquo; &lsquo;animal spirits&rsquo; retreat and the shadows of the Yin World stir. The high-magicians of demand management try to prevent the new economy from sliding into darkness, but it is already too late for that. Even as the shadows thicken something unimaginable is arriving from the edges of the world.</div><div class="image-container" id="at-2">
+    <img class="image" src="../archive/darkside-of-the-wave/image.png">
+  </div><style>
+    .image-container#at-2::after { z-index: -1;clip-path: polygon(calc(82.5% + 5%) 35%, calc(82.5% + 5% - 10%) 65%, calc(82.5% + 5% + 10%) 65%); }
+  </style></article><div class="footer">© all rights reserved.</div></body>
+
+</html>
